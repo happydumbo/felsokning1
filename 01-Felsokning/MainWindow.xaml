@@ -1,0 +1,211 @@
+﻿<Window
+    x:Class="Felsokning_lab.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Felsokning_lab"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Felsökning &amp; nästlade loopar"
+    Width="820"
+    Height="560"
+    mc:Ignorable="d">
+    <Grid Margin="12">
+        <TabControl>
+
+            <!--  Övning 1  -->
+            <TabItem Header="1. Medelvärde">
+                <StackPanel Margin="16">
+                    <TextBlock
+                        Margin="0,0,0,8"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Text="Övning 1 – Medelvärde" />
+                    <TextBlock
+                        Margin="0,0,0,12"
+                        TextWrapping="Wrap"
+                        Text="Programmet ska räkna ut medelvärdet av talen 2, 3, 4, 5 och 7. Rätt svar är 4,2 — men programmet visar något annat. Hitta felet." />
+                    <Button
+                        x:Name="btnEx1"
+                        Width="120"
+                        HorizontalAlignment="Left"
+                        Click="OnEx1Click"
+                        Content="Kör" />
+                    <TextBlock
+                        x:Name="txtResult1"
+                        Margin="0,12,0,0"
+                        FontSize="14"
+                        FontWeight="SemiBold" />
+                </StackPanel>
+            </TabItem>
+
+            <!--  Övning 2  -->
+            <TabItem Header="2. Summera 1–N">
+                <StackPanel Margin="16">
+                    <TextBlock
+                        Margin="0,0,0,8"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Text="Övning 2 – Summera talen 1 till N" />
+                    <TextBlock
+                        Margin="0,0,0,12"
+                        TextWrapping="Wrap"
+                        Text="Programmet ska summera alla heltal från 1 upp till och med N. För N = 5 är rätt svar 15 (1+2+3+4+5). Programmet ger fel svar. Hitta felen." />
+                    <StackPanel Margin="0,0,0,8" Orientation="Horizontal">
+                        <TextBlock
+                            Margin="0,0,8,0"
+                            VerticalAlignment="Center"
+                            Text="N:" />
+                        <TextBox
+                            x:Name="txtInput2"
+                            Width="80"
+                            Text="5" />
+                    </StackPanel>
+                    <Button
+                        x:Name="btnEx2"
+                        Width="120"
+                        HorizontalAlignment="Left"
+                        Click="OnEx2Click"
+                        Content="Kör" />
+                    <TextBlock
+                        x:Name="txtResult2"
+                        Margin="0,12,0,0"
+                        FontSize="14"
+                        FontWeight="SemiBold" />
+                </StackPanel>
+            </TabItem>
+
+            <!--  Övning 3  -->
+            <TabItem Header="3. Största talet">
+                <StackPanel Margin="16">
+                    <TextBlock
+                        Margin="0,0,0,8"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Text="Övning 3 – Hitta största talet" />
+                    <TextBlock
+                        Margin="0,0,0,12"
+                        TextWrapping="Wrap"
+                        Text="Programmet ska hitta det största talet i listan 4, 9, 2, 15, 7. Rätt svar är 15 — men programmet visar något annat. Hitta felen." />
+                    <Button
+                        x:Name="btnEx3"
+                        Width="120"
+                        HorizontalAlignment="Left"
+                        Click="OnEx3Click"
+                        Content="Kör" />
+                    <TextBlock
+                        x:Name="txtResult3"
+                        Margin="0,12,0,0"
+                        FontSize="14"
+                        FontWeight="SemiBold" />
+                </StackPanel>
+            </TabItem>
+
+            <!--  Övning 4  -->
+            <TabItem Header="4. Räkna jämna">
+                <StackPanel Margin="16">
+                    <TextBlock
+                        Margin="0,0,0,8"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Text="Övning 4 – Räkna de jämna talen" />
+                    <TextBlock
+                        Margin="0,0,0,12"
+                        TextWrapping="Wrap"
+                        Text="Programmet ska räkna hur många jämna tal det finns i listan 2, 4, 5, 6, 7. Rätt svar är 3 (talen 2, 4 och 6). Programmet ger fel svar. Hitta felet." />
+                    <Button
+                        x:Name="btnEx4"
+                        Width="120"
+                        HorizontalAlignment="Left"
+                        Click="OnEx4Click"
+                        Content="Kör" />
+                    <TextBlock
+                        x:Name="txtResult4"
+                        Margin="0,12,0,0"
+                        FontSize="14"
+                        FontWeight="SemiBold" />
+                </StackPanel>
+            </TabItem>
+
+            <!--  Övning 5  -->
+            <TabItem Header="5. Celsius → Fahrenheit">
+                <StackPanel Margin="16">
+                    <TextBlock
+                        Margin="0,0,0,8"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Text="Övning 5 – Omvandla temperatur" />
+                    <TextBlock
+                        Margin="0,0,0,12"
+                        TextWrapping="Wrap"
+                        Text="Programmet ska omvandla Celsius till Fahrenheit (F = C * 9 / 5 + 32) och tala om ifall det är varmt (minst 80 °F). För 27 °C är rätt svar 80,6 °F och 'Det är varmt'. Programmet ger fel svar. Hitta felen." />
+                    <StackPanel Margin="0,0,0,8" Orientation="Horizontal">
+                        <TextBlock
+                            Margin="0,0,8,0"
+                            VerticalAlignment="Center"
+                            Text="Celsius:" />
+                        <TextBox
+                            x:Name="txtInput5"
+                            Width="80"
+                            Text="27" />
+                    </StackPanel>
+                    <Button
+                        x:Name="btnEx5"
+                        Width="120"
+                        HorizontalAlignment="Left"
+                        Click="OnEx5Click"
+                        Content="Kör" />
+                    <TextBlock
+                        x:Name="txtResult5"
+                        Margin="0,12,0,0"
+                        FontSize="14"
+                        FontWeight="SemiBold"
+                        TextWrapping="Wrap" />
+                </StackPanel>
+            </TabItem>
+
+            <!--  Övning 6  -->
+            <TabItem Header="6. Nästlade loopar">
+                <StackPanel Margin="16">
+                    <TextBlock
+                        Margin="0,0,0,8"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Text="Övning 6 – Nästlade loopar (skriv koden själv)" />
+                    <TextBlock
+                        Margin="0,0,0,12"
+                        TextWrapping="Wrap"
+                        Text="Här finns ingen färdig kod. Din uppgift: använd två nästlade for-loopar för att rita en rätvinklig triangel av stjärnor med höjden N. För N = 4 ska resultatet bli:&#10;*&#10;**&#10;***&#10;****" />
+                    <StackPanel Margin="0,0,0,8" Orientation="Horizontal">
+                        <TextBlock
+                            Margin="0,0,8,0"
+                            VerticalAlignment="Center"
+                            Text="N:" />
+                        <TextBox
+                            x:Name="txtInput6"
+                            Width="80"
+                            Text="4" />
+                    </StackPanel>
+                    <Button
+                        x:Name="btnEx6"
+                        Width="120"
+                        HorizontalAlignment="Left"
+                        Click="OnEx6Click"
+                        Content="Rita triangel" />
+                    <Border
+                        Margin="0,12,0,0"
+                        Padding="10"
+                        Background="#F7F7F7"
+                        BorderBrush="#DDD"
+                        BorderThickness="1">
+                        <TextBlock
+                            x:Name="txtResult6"
+                            MinHeight="120"
+                            FontFamily="Consolas"
+                            FontSize="16" />
+                    </Border>
+                </StackPanel>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>
